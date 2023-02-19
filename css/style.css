@@ -1,14 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;500;600;800;900&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     text-decoration: none;
     font-family: 'Noto Sans Hebrew', sans-serif;
-}
-
-body {
-    overflow: hidden;
 }
 
 .showcase {
@@ -93,9 +90,9 @@ header img {
     position: relative;
     z-index: 10;
     margin-top: 40px;
-    transform: translateY(1000px);
+    transform: translateY(500px);
     opacity: 0;
-    animation: move 2s forwards ease-out;
+    animation: move 1.5s forwards ease-out;
 }
 
 .text h2 {
@@ -192,15 +189,20 @@ header img {
 }
 
 .menu img {
-    width: 120px;
+    width: 240px;
     position: absolute;
     top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
 }
 
 
 .menu ul {
     position: relative;
     list-style: none;
+    margin-top: 60px;
 }
 
 .menu ul li {
@@ -218,10 +220,183 @@ header img {
     color: #03a9f4;
 }
 
-/* #first {
-    transform: translateY(1000px);
-    animation: move 1.5s forwards ease-out 1s;
+.toggle-about {
+    filter: invert(1);
+    position: absolute;
+    z-index: 100;}
+
+.menu2 {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    opacity: 0;
+}
+
+.active2 {
+    right: -300px !important;
+}
+
+.move-side {
+    opacity: 1;
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 5em;
+    font-weight: 800;
+    color: #0f5543;
+}
+
+
+.in-about {
+    animation: about-logo 2s forwards ease-out;
+    transform: translateY(800px);
+    opacity: 0;
+    margin-bottom: 45px;
+}
+
+.plus-img {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 100px;
+}
+
+.icons {
+    /* padding: 30px; */
+    /* width: 35%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-items {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.flex-items>div {
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    /* background: #a1fce4; */
+}
+
+.icons img {
+    width: 65px;
+    margin-bottom: 15px;
+
+}
+
+.icons h3 {
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: #0f5543;
+}
+
+.icons p {
+    width: 250px;
+    margin: auto;
+}
+
+
+.info-img {
+    width: 65%;
+    position: relative;
+}
+
+.info-img img {
+    width: 100%;
+    border-radius: 10px;
+    animation: about-logo 2.5s forwards ease-out;
+    transform: translateY(800px);
+    opacity: 0;
+}
+
+.info-img p {
+    margin-bottom: 8px;
+}
+
+#av-koteret {
+    position: relative;
+    margin-bottom: 120px;
+}
+
+.koteret {
+    font-size: 2em;
+    font-weight: 900;
+    color: white;
+    text-align: initial;
+    width: 340px;
+    border-radius: 10px;
+    background: #0f5543;
+    padding: 25px;
+    text-align: center;
+    position: absolute;
+    bottom: -90px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    transform: translateY(800px);
+    opacity: 0;
+
+}
+
+#profile-img {
+    width: 255px;
+    float: right;
+    margin-left: 20px;
+    margin-top: 6px;
+}
+
+#about {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    padding-right: 20px;
+    transition: 0.5s;
+}
+
+#button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 48px 100px;
+        display: flex;
+        justify-content: end;
+}
+
+/* #rezume {
+    transform: translateY(800px);
+    opacity: 0;
 } */
+
+#first-icon {
+    animation: about-logo 3s forwards ease-out;
+    transform: translateY(800px);
+    opacity: 0;
+}
+
+#second-icon,#rezume,#third-icon {
+    transform: translateY(800px);
+    opacity: 0;
+}
+
+.effect-to-second {
+    animation: about-logo 2.5s forwards ease-out;
+}
+
+/* .effect-to-koteret {
+    animation: about-logo 2.5s forwards ease-out;
+} */
+
+
 
 @keyframes move {
     to {
@@ -230,6 +405,12 @@ header img {
     }
 }
 
+@keyframes about-logo {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 
 
@@ -246,27 +427,4 @@ header img {
         font-size: 2em;
     }
 
-}   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
