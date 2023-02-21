@@ -116,7 +116,7 @@ header img {
     max-width: 700px;
 }
 
-.text a {
+.text a,.special-link {
     display: inline-block;
     font-size: 1em;
     background: #fff;
@@ -130,6 +130,10 @@ header img {
 }
 
 .text a:hover {
+    letter-spacing: 6px;
+}
+
+.special-link:hover {
     letter-spacing: 6px;
 }
 
@@ -240,14 +244,12 @@ header img {
     opacity: 1;
 }
 
-
 h1 {
     text-align: center;
     font-size: 5em;
     font-weight: 800;
     color: #0f5543;
 }
-
 
 .in-about {
     animation: about-logo 2s forwards ease-out;
@@ -372,11 +374,6 @@ h1 {
         justify-content: end;
 }
 
-/* #rezume {
-    transform: translateY(800px);
-    opacity: 0;
-} */
-
 #first-icon {
     animation: about-logo 3s forwards ease-out;
     transform: translateY(800px);
@@ -392,10 +389,100 @@ h1 {
     animation: about-logo 2.5s forwards ease-out;
 }
 
-/* .effect-to-koteret {
-    animation: about-logo 2.5s forwards ease-out;
-} */
+.flex-columns .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
 
+.flex-reverse .row {
+    flex-direction: row-reverse;
+}
+
+.flex-columns .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.flex-columns .column .column-1, .flex-columns .column .column-2 {
+    height: 100%;
+}
+
+.flex-columns .column-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 30px;
+    background: #ccf8ed;
+    padding-top: 13px;
+}
+
+.diff-col {
+    background: #0f5543 !important;
+    color: #ccf8ed !important;
+}
+
+.diff-col h2 {
+    color: #ccf8ed !important;
+}
+
+.diff-col .special-link {
+    background: #ccf8ed !important;
+    color: #0f5543 !important;
+}
+
+.diff-col p.place-name {
+    color: #9affff;
+}
+
+.flex-columns img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flex-columns .place-icon {
+    width: 45px !important;
+    height: initial !important;
+    object-fit: initial !important; 
+}
+
+.posi {
+    display: flex;
+    margin-right: -10px;
+    margin-bottom: 15px; 
+}
+
+.flex-columns p {
+    margin: 10px 0;
+}
+
+p.place-name {
+    color: #124c16;
+    font-style: italic;
+    font-weight: 700;
+    font-size: larger;
+    text-decoration: underline;
+    margin-bottom: 15px;
+}
+
+
+.flex-columns h2 {
+    font-weight: 900;
+    /* margin-bottom: 20px; */
+    color: #0f5543;
+    font-size: xx-large;
+}
+
+#article-one {
+    animation: about-logo 2.5s forwards ease-out;
+    transform: translateY(800px);
+    opacity: 0;
+}
 
 
 @keyframes move {
@@ -411,8 +498,6 @@ h1 {
         opacity: 1;
     }
 }
-
-
 
 @media (max-width: 798px) {
     .showcase, .showcase header {
