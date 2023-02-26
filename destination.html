@@ -24,15 +24,34 @@
 
 <body>
 
+    <header>
+        <div class="menu menu2">
+            <img src="img/zura-logo2.jpg" alt="">
+            <ul>
+                <li><a href="index.html">בית</a></li>
+                <li><a href="about.html">אודות</a></li>
+                <li><a href="destination.html">מקומות פופולרים</a></li>
+                <li><a href="#">תמונות מטיולים</a></li>
+                <li><a href="#">מטיילים מרוצים</a></li>
+                <li><a href="#">מידע והזמנות</a></li>
+            </ul>
+        </div>
+    </header>
+
     <section id="blog">
+
+        <div class="button">
+            <a href="#" class="toggle toggle-about"></a>
+        </div>
+
         <h1 class="in-about">
             מקומות פופולרים
         </h1>
 
         <div>
 
-            <article class="flex-columns">
-                <div id="article-one" class="row">
+            <article id="article-one" class="flex-columns">
+                <div class="row">
                     <div class="column">
                         <div class="column-1">
                             <img src="img/blog-2.jpg" alt="">
@@ -44,20 +63,21 @@
                                 <img class="place-icon" src="img/place.png" alt="">
                                 <h2>גשר היהלום</h2>
                             </div>
-                           <p class="place-name">קניון דשבשי</p>
+                            <p class="place-name">קניון דשבשי</p>
                             <p>
                                 באחת משמורות הטבע היפות בגאורגיה נפתח גשר זכוכית חדש בגובה של 280 מטר מעל קניון דשבשי.
                                 בר היהלום התלוי הממקום באמצע הגשר מוקף בנוף פראי ומפלי מים. במסלול הזה מגיעים ישירות
                                 לגשר היהלום, מטיילים בקניון דשבשי היפיפה ונהנים מאטרקציות כמו אופניים באוויר ונדנדה
                                 ענקית המשקיפה לקניון.
-                                גשר היהלום גם מציע מסעדה טעימה שאפשר לאכול בה ארוחת צהריים. </p>
-                            <a class="special-link" href="">קראו עוד</a>
+                                גשר היהלום גם מציע מסעדה טעימה שאפשר לאכול בה ארוחת צהריים. 
+                            </p>
+                            <a class="special-link" href="first-place.html" target="_blank">קראו עוד</a>
                         </div>
                     </div>
                 </div>
             </article>
 
-            <article class="flex-columns flex-reverse">
+            <article id="article-two" class="flex-columns flex-reverse">
                 <div class="row">
                     <div class="column">
                         <div class="column-1">
@@ -80,13 +100,13 @@
                                 BORJOMI- KHARAGAULI NATIONAL PARK
                                 שממנו יוצאים למגוון טיולים וטרקים בגן הלאומי היפה.
                             </p>
-                            <a class="special-link" href="">קראו עוד</a>
+                            <a class="special-link" href="second-place.html" target="_blank">קראו עוד</a>
                         </div>
                     </div>
                 </div>
             </article>
 
-            <article class="flex-columns">
+            <article id="article-three" class="flex-columns">
                 <div class="row">
                     <div class="column">
                         <div class="column-1">
@@ -109,7 +129,7 @@
                                 הכוללות את הפונציקי הכי טעים בגאורגיה, מפעל ייצור של היקב המרכזי בקאחתי שבו גם נעשה סבב
                                 טעימות של יין, ברנדי וצאצא.
                             </p>
-                            <a class="special-link" href="">קראו עוד</a>
+                            <a class="special-link" href="third-place.html" target="_blank">קראו עוד</a>
                         </div>
                     </div>
                 </div>
@@ -118,8 +138,6 @@
 
         </div>
 
-
-
     </section>
 
 
@@ -127,10 +145,50 @@
 
 
 
+    <script>
+        const second = document.querySelector('#article-two');
+        const third = document.querySelector('#article-three');
 
 
+        let did = false;
+        let did2 = false;
 
+        window.addEventListener('scroll', function () {
+            if (did === false) {
+                if (window.pageYOffset > 250) {
+                    second.classList.toggle('effect-to-second')
+                    did = true;
+                }
+            }
+        })
 
+        window.addEventListener('scroll', function () {
+            if (did2 === false) {
+                if (window.pageYOffset > 700) {
+                    third.classList.toggle('effect-to-second')
+                    did2 = true;
+                }
+            }
+        })
+
+        window.onunload = function () {
+            window.scrollTo(0, 0);
+        }
+    </script>
+
+    <script>
+
+        const menuToggle = document.querySelector('.toggle');
+        const showcase = document.querySelector('#blog');
+        const menu = document.querySelector('.menu2');
+        
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            showcase.classList.toggle('active2');
+            menu.classList.toggle('move-side');
+        })
+        
+    </script>
 
 
 
